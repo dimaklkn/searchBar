@@ -1,0 +1,128 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --clr-neutral-100: white;
+  --clr-neutral-400: hsl(266, 7%, 40%);
+  --clr-neutral-700: #212529;
+  --clr-accent: hsl(336, 92%, 71%);
+  --clr-text: #f8f9fa;
+  --clr-gradient-start: #495057;
+  --clr-gradient-end: #212529;
+
+  --fs-400: 1.125rem;
+  --fs-700: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-image: linear-gradient(
+    120deg,
+    var(--clr-gradient-start),
+    var(--clr-gradient-end)
+  );
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.searchbar-container {
+  width: 500px;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  height: fit-content;
+  padding: 1rem 2rem;
+  border: 0;
+  background-color: var(--clr-neutral-400);
+  color: var(--clr-text);
+  font-size: var(--fs-400);
+}
+
+.searchInput::placeholder {
+  color: var(--clr-text);
+}
+
+.searchbar-container::before {
+  content: "";
+  position: absolute;
+  left: 487px;
+  top: -25%;
+  width: 90px;
+  height: 90px;
+  border: 5px solid var(--clr-neutral-400);
+  border-radius: 50%;
+  background-color: var(--clr-neutral-700);
+}
+
+.search-button {
+  position: absolute;
+  left: 497px;
+  top: -9.33%;
+  width: 70px;
+  height: 70px;
+  border: 5px solid var(--clr-accent);
+  border-radius: 50%;
+  background-color: var(--clr-neutral-700);
+  color: var(--clr-accent);
+  font-size: var(--fs-700);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  transition-property: scale;
+}
+
+.search-button:hover {
+  scale: 1.1;
+}
